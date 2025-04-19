@@ -76,7 +76,6 @@ logging.basicConfig(
     format='%(asctime)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
-
 # ---------------- API Clients Initialization ----------------
 # DeepSeek Client
 deepseek_client = OpenAI(
@@ -1316,8 +1315,8 @@ class MultimediaAssistantApp(ctk.CTk):
         self.instruction_label.grid(row=0, column=1, padx=10, pady=5, sticky="e")
         
         # 检查头像图片是否存在
-        ai_avatar_path = "/Users/xujing/dscamera/浙江清华长三角研究院.png"  # 在程序目录下放置此图片
-        user_avatar_path = "/Users/xujing/dscamera/user.png"  # 在程序目录下放置此图片
+        ai_avatar_path = "./浙江清华长三角研究院.png"  # 在程序目录下放置此图片
+        user_avatar_path = "./user.png"  # 在程序目录下放置此图片
         
         # 加载头像（如果本地图片存在则使用本地图片，否则使用生成的圆形）
         self.ai_avatar = self.create_circle_avatar((50, 50), "blue", "DS", image_path=ai_avatar_path)
