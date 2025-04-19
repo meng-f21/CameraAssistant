@@ -1,0 +1,10 @@
+
+# Sensitive information
+# *.mp3
+# *.wav
+# .env
+# Alibaba Cloud credentials
+# OSS_ACCESS_KEY_ID=*
+# OSS_ACCESS_KEY_SECRET=*
+# QWEN_API_KEY=*
+# QWEN_BASE_URL=*
