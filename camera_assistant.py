@@ -24,19 +24,34 @@ import logging
 import random
 
 # ---------------- Configuration ----------------
-# OSS Configuration
-OSS_ACCESS_KEY_ID = "YOUR_OSS_ACCESS_KEY_ID"
-OSS_ACCESS_KEY_SECRET = "YOUR_OSS_ACCESS_KEY_SECRET"
-OSS_ENDPOINT = 'oss-cn-beijing.aliyuncs.com'
-OSS_BUCKET = 'felixdscamera'
+# Import configuration from local config file
+try:
+    from config import (
+        OSS_ACCESS_KEY_ID,
+        OSS_ACCESS_KEY_SECRET,
+        OSS_ENDPOINT,
+        OSS_BUCKET,
+        DEEPSEEK_API_KEY,
+        DEEPSEEK_BASE_URL,
+        QWEN_API_KEY,
+        QWEN_BASE_URL
+    )
+except ImportError:
+    # Fallback to placeholder values if config.py is not found
+    print("Warning: config.py not found. Using placeholder values.")
+    # OSS Configuration
+    OSS_ACCESS_KEY_ID = "YOUR_OSS_ACCESS_KEY_ID"
+    OSS_ACCESS_KEY_SECRET = "YOUR_OSS_ACCESS_KEY_SECRET"
+    OSS_ENDPOINT = 'oss-cn-beijing.aliyuncs.com'
+    OSS_BUCKET = 'felixdscamera'
 
-# DeepSeek API Configuration
-DEEPSEEK_API_KEY = "YOUR_DEEPSEEK_API_KEY"
-DEEPSEEK_BASE_URL = "https://api.deepseek.com"
+    # DeepSeek API Configuration
+    DEEPSEEK_API_KEY = "YOUR_DEEPSEEK_API_KEY"
+    DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 
-# Qwen-VL API Configuration
-QWEN_API_KEY = "YOUR_QWEN_API_KEY"
-QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    # Qwen-VL API Configuration
+    QWEN_API_KEY = "YOUR_QWEN_API_KEY"
+    QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 
 # TTS Configuration
 dashscope.api_key = QWEN_API_KEY

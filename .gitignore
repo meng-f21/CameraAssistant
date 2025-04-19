@@ -1,4 +1,3 @@
-
 # Sensitive information
 # *.mp3
 # *.wav
@@ -8,3 +7,39 @@
 # OSS_ACCESS_KEY_SECRET=*
 # QWEN_API_KEY=*
 # QWEN_BASE_URL=*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local configuration
+config.py
+
+# API Keys (commented out as they're now in config.py)
+# OSS_ACCESS_KEY_ID=*
+# OSS_ACCESS_KEY_SECRET=*
+# QWEN_API_KEY=*
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+.env/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Output files
+output/
+*.wav
+*.mp3
